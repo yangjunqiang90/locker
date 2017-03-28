@@ -4,3 +4,9 @@
 IP=$1
 sed -i "5d" locker/locker/main.cpp 
 sed -i "4a QString ip=\"$IP\";" locker/locker/main.cpp
+
+#build qt project 
+qmake -project
+qmake locker.pro 
+make
+sudo ./locker
